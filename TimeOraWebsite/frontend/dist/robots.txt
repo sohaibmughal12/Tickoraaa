@@ -1,0 +1,9 @@
+User-agent: *
+Allow: /
+Disallow: /admin/
+Disallow: /profile/
+Disallow: /checkout/
+Disallow: /order-success/
+
+# Specify production sitemap XML index location
+Sitemap: https://tickora-backend.onrender.com/sitemap.xml
