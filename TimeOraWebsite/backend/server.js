@@ -42,6 +42,9 @@ app.use(express.json());
 app.use(express.urlencoded({ extended: true }));
 
 // Health Check API
+app.get("/", (req, res) => {
+  res.send("Tickora Backend is Running 🚀");
+});
 app.get('/api/health', (req, res) => {
   res.status(200).json({ status: 'UP', message: 'Tickora luxury API server running smoothly.' });
 });
