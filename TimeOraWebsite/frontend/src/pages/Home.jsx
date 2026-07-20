@@ -81,7 +81,7 @@ const Home = () => {
         ]);
 
         setCategories(catRes.data.data);
-        
+
         const allProducts = prodRes.data.data.products;
         // Filter out featured and new arrivals
         setFeaturedProducts(allProducts.filter(p => p.isFeatured).slice(0, 3));
@@ -97,7 +97,7 @@ const Home = () => {
 
   return (
     <div className="w-full text-white">
-      
+
       {/* 1. HERO SECTION WITH CAROUSEL */}
       <section className="relative h-[85vh] sm:h-[90vh] bg-black overflow-hidden">
         <AnimatePresence mode="wait">
@@ -115,7 +115,7 @@ const Home = () => {
               alt={heroSlides[currentSlide].title}
               className="w-full h-full object-cover opacity-60"
             />
-            
+
             <div className="absolute inset-0 z-20 flex items-center justify-start max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
               <div className="max-w-xl text-left space-y-4">
                 <motion.span
@@ -164,9 +164,8 @@ const Home = () => {
             <button
               key={index}
               onClick={() => setCurrentSlide(index)}
-              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${
-                currentSlide === index ? 'bg-luxury-gold w-8' : 'bg-white/30'
-              }`}
+              className={`w-2.5 h-2.5 rounded-full transition-all duration-300 ${currentSlide === index ? 'bg-luxury-gold w-8' : 'bg-white/30'
+                }`}
               aria-label={`Slide ${index + 1}`}
             />
           ))}
@@ -177,9 +176,9 @@ const Home = () => {
       <section className="bg-luxury-gray py-10 border-b border-white/5">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 grid grid-cols-1 md:grid-cols-3 gap-8">
           {[
-            { icon: FiAward, title: 'Premium Craftsmanship', desc: 'Hand-selected materials, Japanese movements, sapphire crystal glass.' },
-            { icon: FiShield, title: '2-Year Warranty', desc: 'Every watch is backed by a 2-year warranty for absolute peace of mind.' },
-            { icon: FiRotateCcw, title: 'Easy Returns', desc: 'Enjoy hassle-free returns and exchanges within 14 days of receipt.' }
+            { icon: FiAward, title: 'Trusted Seller', desc: 'Customer trust is our biggest strength.' },
+            { icon: FiShield, title: 'Wide Collection', desc: 'A variety of styles and brands to choose from, for every budget.' },
+            { icon: FiRotateCcw, title: 'Order via WhatsApp', desc: 'Contact us directly on WhatsApp for a quick and easy order.' }
           ].map((item, idx) => (
             <div key={idx} className="flex items-start space-x-4 border-r border-white/5 last:border-r-0 pr-4">
               <item.icon className="text-luxury-gold flex-shrink-0 mt-1" size={24} />
@@ -290,7 +289,7 @@ const Home = () => {
               </Link>
             </div>
           </div>
-          
+
           <div className="flex flex-col items-center justify-center space-y-6">
             <h4 className="font-playfair text-lg text-white uppercase tracking-widest">Pricing Expires In</h4>
             <CountdownTimer targetDate={flashSaleEnd} />
@@ -396,7 +395,7 @@ const Home = () => {
             <span className="text-xs uppercase tracking-widest text-luxury-gold font-semibold font-poppins">Follow our Journal</span>
             <h2 className="text-2xl sm:text-3xl font-playfair uppercase text-white tracking-wider">#TickoraTime</h2>
           </div>
-          
+
           <div className="grid grid-cols-2 md:grid-cols-4 gap-4">
             {[
               'https://images.unsplash.com/photo-1522312346375-d1a52e2b99b3?q=80&w=400',
